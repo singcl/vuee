@@ -8,7 +8,7 @@ class Vuee {
 
     observe(data) {
         Object.keys(data).forEach((key) => {
-            let ob = new Observer()
+            const ob = new Observer()
             let val = data[key]
             Object.defineProperty(data, key, {
                 get() {
@@ -27,7 +27,7 @@ class Vuee {
     compile(node) {
         [].forEach.call(node.childNodes, (child) => {
             if (!child.firstElementNode && /\{\{(.*)\}\}/.test(child.innerHTML)) {
-                let key = RegExp.$1.trim()
+                const key = RegExp.$1.trim()
                 child.innerHTML = child.innerHTML.replace(new RegExp('{{\\s*' + key + '\\s*}}', 'gm'), this.options.data[key])
                 Observer.target = child
                 this.options.data[key]

@@ -8,14 +8,17 @@
 </head>
 <body>
     <div id="root">
-        <div>counter: {{counter}}</div>
+        <div>Hello, {{name}}</div>
+        <div>counter: {{counter}}
+        </div>
     </div>
     <script src="./Vuee.js"></script>
     <script>
         const vm = new Vuee({
             el: '#root',
             data: {
-                counter: 1
+                counter: 1,
+                name: '马宏德'
             }
         })
 
