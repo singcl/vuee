@@ -1,4 +1,5 @@
-// 极简的类Vue 数据响应式框架
+// 极简单，极不完善 类Vue 数据响应式框架探索
+
 class Vuee {
     constructor(options) {
         this.options = options
